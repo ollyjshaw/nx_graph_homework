@@ -1,0 +1,5 @@
+[run]
+source = homework
+branch = True
+[report]
+fail_under = 100
