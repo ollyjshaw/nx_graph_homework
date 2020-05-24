@@ -18,7 +18,10 @@ def test_homework_example():
         [1, 1, 0, 0],
     ]
 
-    assert array_equal(rich.to_nx_graph(input), expected)
-
-    assert array_equal(olly.to_nx_graph(input), expected)
-    assert array_equal(olly_terse.to_nx_graph(input), expected)
+    competing_solutions = [
+        olly.to_nx_graph,
+        olly_terse.to_nx_graph,
+        rich.to_nx_graph
+    ]
+    for solution in competing_solutions:
+        assert array_equal(solution(input), expected)
