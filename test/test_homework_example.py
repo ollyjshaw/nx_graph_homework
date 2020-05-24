@@ -1,5 +1,6 @@
 from homework import rich
 from homework import olly
+from homework import olly_terse
 from numpy import array_equal
 
 
@@ -18,6 +19,6 @@ def test_homework_example():
     ]
 
     assert array_equal(rich.to_nx_graph(input), expected)
-    
+
     assert array_equal(olly.to_nx_graph(input), expected)
-    assert array_equal(olly.to_nx_graph_terse(input), expected)
+    assert array_equal(olly_terse.to_nx_graph(input), expected)
