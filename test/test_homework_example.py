@@ -6,16 +6,16 @@ from numpy import array_equal
 
 def test_homework_example():
     input = [
-        [1,2],
+        [1, 2],
         [2],
         [],
-        [0,1],
+        [0, 1],
     ]
     expected = [
-        [0,1,1,0],
-        [0,0,1,0],
-        [0,0,0,0],
-        [1,1,0,0],
+        [0, 1, 1, 0],
+        [0, 0, 1, 0],
+        [0, 0, 0, 0],
+        [1, 1, 0, 0],
     ]
 
     assert array_equal(rich.to_nx_graph(input), expected)
